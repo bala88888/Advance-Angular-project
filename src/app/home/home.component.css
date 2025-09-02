@@ -1,0 +1,21 @@
+.container {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: #0ce27b; /* a nice green */
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+code {
+  background-color: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+

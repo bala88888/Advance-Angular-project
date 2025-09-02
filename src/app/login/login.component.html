@@ -1,0 +1,57 @@
+
+
+<div class="login-page">
+  <div class="login-container">
+    <h2>Welcome Back</h2>
+    <form (submit)="onLogin();" autocomplete="off">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          [(ngModel)]="username"
+          aria-placeholder="please type admin"
+          name="username"
+          placeholder="please type admin"
+          required
+        />
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          [(ngModel)]="password"
+           aria-placeholder="please type admin"
+          name="password"
+          placeholder="please type admin"
+          required
+        />
+      </div>
+      
+      <button type="submit" class="btn-login">Login</button>
+
+      <!-- Error message -->
+      <p *ngIf="loginError" style="color: red; margin-top: 10px;">
+        {{ loginError }}
+      </p>
+
+      <p class="signup-text">
+        Don't have an account? <a routerLink="/signup">Sign Up</a>
+      </p>
+    </form>
+  </div>
+    <!-- Popup component -->
+
+</div>
+
+  <app-spopup 
+    [title]="popupTitle" 
+    [message]="popupMessage" 
+    [type]="popupType" 
+    [show]="popupVisible"
+    (close)="closePopup()"
+  >
+</app-spopup>
+
