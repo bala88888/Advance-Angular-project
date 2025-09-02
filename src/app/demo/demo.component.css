@@ -1,0 +1,44 @@
+pre {
+  background-color: #e6f0ff; /* faint blue */
+  border-radius: 6px;
+  padding: 16px;
+  overflow-x: auto;
+  font-family: 'Fira Code', monospace, monospace;
+  font-size: 14px;
+  color: #000; /* text color */
+  box-shadow: 0 0 5px rgba(0, 0, 128, 0.1);
+}
+
+pre[class*="language-"] {
+  position: relative; /* container for absolute positioning */
+  background-color: #e6f0ff; /* faint blue */
+  border-radius: 6px;
+  padding: 16px;
+  overflow-x: auto;
+  font-family: 'Fira Code', monospace, monospace;
+  font-size: 14px;
+  color: #000;
+  box-shadow: 0 0 5px rgba(0, 0, 128, 0.1);
+}
+
+/* Prism copy button positioned vertically center on right side */
+div.prism-copy-to-clipboard {
+  position: absolute !important;
+  top: 50% !important;       /* vertical center */
+  right: 8px !important;     /* distance from right edge */
+  transform: translateY(-50%); /* center exactly */
+  
+  background: #101011;
+  color: white;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+div.prism-copy-to-clipboard:hover {
+  opacity: 1;
+}

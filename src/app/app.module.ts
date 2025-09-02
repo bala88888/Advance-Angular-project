@@ -12,6 +12,8 @@ import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { SpopupComponent } from './spopup/spopup.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InfoInterceptor } from './info.interceptor';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,10 @@ import { SpopupComponent } from './spopup/spopup.component';
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [ 
+    //application of interceptors=======================================
+     { provide: HTTP_INTERCEPTORS, useClass:InfoInterceptor, multi: true }
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

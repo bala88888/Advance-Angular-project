@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
 
   closePopup() {
     this.popupVisible = false;
-      this.router.navigate(['/demo']);
+      this.router.navigate(['/study']);
   }
 
 }
